@@ -1,0 +1,403 @@
+/* Reset dan gaya body */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    background-color: #2e2e2e;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 40px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+}
+
+.header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+.header nav a.active {
+    color: #80b541;
+}
+
+/* Gaya konten utama */
+.main-content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.points-banner {
+    background-color: #3c5e3f;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: -50px;
+    margin-bottom: -20px;
+}
+
+.points-banner .points {
+    font-size: 24px;
+    color: #f0c431;
+}
+
+/* Menu Tab */
+.tab-menu {
+    display: flex;
+    margin: 20px 0;
+}
+
+.tab {
+    background-color: #354236;
+    color: #7a7a7a;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.tab.active {
+    background-color: #3c5e3f;
+    color: #fff;
+}
+
+/* Konten Tab */
+.tab-content {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Opsi Dompet */
+.wallet-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.wallet-btn {
+    padding: 15px;
+    width: 1500px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.wallet-btn:hover {
+    background-color: #3c5e3f;
+    color: #fff;
+    transform: scale(1.05);
+    border: 1px solid #fff;
+}
+
+.wallet-btn.selected {
+    background-color: #3c5e3f;
+    color: #fff;
+    border: 2px solid #80b541;
+}
+
+.wallet-logo-text img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+/* Opsi Poin */
+.points-options {
+    display: flex;
+    gap: 5px;
+}
+
+.points-options button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+/* Efek hover untuk pilihan nominal */
+.points-options button:hover {
+    background-color: #3c5e3f;
+    color: #fff;
+    transform: scale(1.05);
+    border: 1px solid #fff;
+}
+
+/* Gaya tombol yang terpilih */
+.points-options button.selected {
+    background-color: #3c5e3f;
+    color: #fff;
+    border: 2px solid #80b541;
+}
+
+/* Bagian Poin Kustom */
+
+.input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.currency {
+    position: absolute;
+    left: 10px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.custom-points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.custom-points input[type="number"] {
+    max-width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.custom-points p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.custom-points button {
+    background-color: #3c5e3f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.custom-points button:hover {
+    color: #fff;
+    transform: scale(1.05);
+    border: 1px solid #fff;
+}
+
+.custom-points button.selected {
+    background-color: #80b541;
+    color: #fff;
+}
+
+.modal {
+    display: none; /* Modal tersembunyi secara default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Pastikan modal berada di atas elemen lain */
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    z-index: 10000; /* Pastikan konten modal berada di atas */
+}
+
+/* Exchange Pending Dialog */
+.pending-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+}
+
+.pending-dialog-content {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pending-dialog-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.pending-dialog-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.pending-dialog-content button {
+    background-color: #3c5e3f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pending-dialog-content button:hover {
+    background-color: #80b541;
+}
+
+
+/* Grid Voucher */
+.voucher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Voucher Card Styling */
+.voucher-card {
+    background-color: #fff;
+    color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.voucher-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Link Styling */
+.voucher-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Voucher Card Title */
+.voucher-card h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Voucher Card Points Text */
+.voucher-card p {
+    color: #f0c431;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Voucher Card Image */
+.voucher-card img {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 120px;
+    object-fit: cover;
+}
+
+
+/* Footer */
+footer {
+    background-color: #445442;
+    margin-top: auto;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #ffffff;
+    margin: 0 20px;
+}
+
+.footer-content img {
+    margin-right: 10px;
+}
+
+.footer-content span {
+    font-size: 18px;
+    font-weight: bold;
+}
