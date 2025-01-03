@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.logo-img {
+    width: 40px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header nav {
+    display: flex;
+    gap: 20px; 
+    margin-left: auto; 
+    align-items: center;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+.header nav a.active {
+    color: #80b541;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #445442;
+    margin-top: auto;
+    width: 100%;
+    background-color: #445442;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #ffffff;
+    margin: 0 20px;
+}
+
+.footer-content img {
+    margin-right: 10px;
+}
+
+.footer-content span {
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Banner Reward */
+.reward-banner {
+    width: 1520px;
+    margin: 150px auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Konten Detail Reward */
+.reward-content {
+    width: 1000px;
+    height: 400px;
+    padding: 20px;
+    background: #51724E;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+
+/* Judul Reward */
+.reward-content h1 {
+    font-size: 48px;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+/* Jumlah Poin yang Diperlukan */
+.reward-content h2 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #FFE352;
+    margin: 10px 0;
+}
+
+/* Informasi Tambahan Reward */
+.reward-content p {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 5px 0;
+}
